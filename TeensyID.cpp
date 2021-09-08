@@ -25,7 +25,7 @@
 #include "TeensyID.h"
 
 // UNIQUE_ID
-#if defined ARDUINO_TEENSY40 || defined ARDUINO_TEENSY41
+#if defined ARDUINO_TEENSY40 || defined ARDUINO_TEENSY41 || defined ARDUINO_TEENSY_MICROMOD
 static uint32_t getTeensySerial(void) {
 	uint32_t num;
 	num = HW_OCOTP_MAC0 & 0xFFFFFF;
@@ -79,7 +79,7 @@ const char* teensySN(void) {
 	return teensySerial;
 	}
 
-#if defined ARDUINO_TEENSY40 || defined ARDUINO_TEENSY41
+#if defined ARDUINO_TEENSY40 || defined ARDUINO_TEENSY41 || defined ARDUINO_TEENSY_MICROMOD
 
 	void teensyMAC(uint8_t *mac) { // there are 2 MAC addresses each 48bit 
 		uint32_t m1 = HW_OCOTP_MAC1;
@@ -115,7 +115,7 @@ const char* teensyMAC(void) {
 	return teensyMac;
 	}
 
-#if defined ARDUINO_TEENSY40 || defined ARDUINO_TEENSY41
+#if defined ARDUINO_TEENSY40 || defined ARDUINO_TEENSY41 || defined ARDUINO_TEENSY_MICROMOD
 	void kinetisUID(uint32_t *uid) {
 		}
 
@@ -158,7 +158,7 @@ const char* teensyMAC(void) {
 
 #endif
 
-#if defined ARDUINO_TEENSY40  || defined ARDUINO_TEENSY41
+#if defined ARDUINO_TEENSY40  || defined ARDUINO_TEENSY41 || defined ARDUINO_TEENSY_MICROMOD
 
 	void teensyUUID(uint8_t *uuid) {
 		}

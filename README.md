@@ -1,13 +1,14 @@
 # TeensyID
 - Teensy (USB-)Serialnumber, MAC-Address, 
 - Kinetis ChipUID and UUID (RFC4122) for Teensy 3.x and LC
-- 64-bit UID for Teensy 4.x
+- 64-bit UID for Teensy 4.x and MicroMod Teensy
 
 Tested:
 - Teensy 3.5 by sstaub
 - Teensy 3.2, WIZ850io, PRJC sd/Ethernet adapter, Arduino 1.8.11, TD 1.35, by bboyes
 - Teensy 3.6 amd LC by manitou
 - Teensy 4.x by sstaub
+- Teensy MicroMod by MaffooClock
 
 ## Examples
 ### **ReadAll** for Teensy 3.x and LC
@@ -54,7 +55,7 @@ Array 128-bit UUID RFC4122: 00496017-3138-404E-8045-04E9E501E629
 String 128-bit UUID RFC4122: 00496017-3138-404e-8045-04e9e501e629
 ```
 
-### **T4_ReadAll** for Teensy 4.x
+### **T4_ReadAll** for Teensy 4.x and MicroMod
 ```
 #include "Arduino.h"
 #include <TeensyID.h>
